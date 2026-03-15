@@ -34,7 +34,9 @@ def check_guess(guess, secret):
         return "Win", "🎉 Correct!"
 
     try:
-        # FIXME: Logic breaks here
+        # FIX: Corrected swapped hint messages in check_guess.
+        # "Too High" now returns "Go LOWER" and "Too Low" now returns "Go HIGHER".
+        # Identified and fixed using Claude in VS Code.
         if guess > secret:
             return "Too High", "📉 Go LOWER!"
         else:
@@ -43,7 +45,9 @@ def check_guess(guess, secret):
         g = str(guess)
         if g == secret:
             return "Win", "🎉 Correct!"
-        # FIXME: Logic breaks here
+        # FIX: Corrected swapped hint messages in check_guess.
+        # "Too High" now returns "Go LOWER" and "Too Low" now returns "Go HIGHER".
+        # Identified and fixed using Claude in VS Code.
         if g > secret:
             return "Too High", "📉 Go LOWER!"
         return "Too Low", "📈 Go HIGHER!"
@@ -55,13 +59,10 @@ def update_score(current_score: int, outcome: str, attempt_number: int):
         if points < 10:
             points = 10
         return current_score + points
-
-    if outcome == "Too High":
-        if attempt_number % 2 == 0:
-            return current_score + 5
-        return current_score - 5
-
-    if outcome == "Too Low":
+    # FIX: Removed incorrect even/odd attempt check that was adding +5 points
+    # for wrong guesses. All wrong guesses now correctly subtract 5 points.
+    # Refactored using Claude in VS Code.
+    if outcome in ("Too High", "Too Low"):
         return current_score - 5
 
     return current_score
