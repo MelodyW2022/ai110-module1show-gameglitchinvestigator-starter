@@ -1,3 +1,4 @@
+# Refactored: all 4 functions moved from app.py to logic_utils.py using Claude in VS Code.
 def get_range_for_difficulty(difficulty: str):
     """Return (low, high) inclusive range for a given difficulty."""
     if difficulty == "Easy":
@@ -68,9 +69,9 @@ def update_score(current_score: int, outcome: str, attempt_number: int):
         if points < 10:
             points = 10
         return current_score + points
-    # FIX: Removed incorrect even/odd attempt check that was adding +5 points
-    # for wrong guesses. All wrong guesses now correctly subtract 5 points.
-    # Refactored using Claude in VS Code.
+    # FIX: Removed incorrect even attempt check that was adding +5 points for "Too High" guesses
+    # All wrong guesses now correctly subtract 5 points.
+    # Identified, fixed and refactored using Claude in VS Code.
     if outcome in ("Too High", "Too Low"):
         return current_score - 5
 
