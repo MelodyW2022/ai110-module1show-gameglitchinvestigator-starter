@@ -10,6 +10,10 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 ---
 
+Bug 1 — Higher/Lower Hint is Reversed
+Expected: When the guess is too low, it says "Go HIGHER," and when the guess is too high, it says "Go LOWER."
+What happened: The hints were completely flipped — when the guess is too low it says "Go HIGHER" and when the guess is too high it says "Go LOWER."
+
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
