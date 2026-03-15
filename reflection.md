@@ -14,6 +14,14 @@ Bug 1 — Higher/Lower Hint is Reversed
 Expected: When the guess is too low, it says "Go HIGHER," and when the guess is too high, it says "Go LOWER."
 What happened: The hints were completely flipped — when the guess is too low it says "Go HIGHER" and when the guess is too high it says "Go LOWER."
 
+Bug 2 - Sidebar and Game Info Are Out of Sync
+Expected: The range and number of attempts shown in the sidebar and the banner right under Make a Guess should match.
+What happened: The banner always shows "Guess a number between 1 and 100" regardless of difficulty, and the attempts left is already off by 1 at the start of the game.
+
+Bug 3 - Score Increases on Wrong Guesses
+Expected: Only correct guesses earn points; wrong guesses deduct points.
+What happended: "Too High" guessses on even attempts added 5 points instead of subtracting, rewarding wrong answers.
+
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
