@@ -34,6 +34,7 @@ def check_guess(guess, secret):
         return "Win", "🎉 Correct!"
 
     try:
+        # FIXME: Logic breaks here
         if guess > secret:
             return "Too High", "📉 Go LOWER!"
         else:

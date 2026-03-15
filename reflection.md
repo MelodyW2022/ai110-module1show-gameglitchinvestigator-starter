@@ -24,8 +24,11 @@ What happended: "Too High" guessses on even attempts added 5 points instead of s
 
 ## 2. How did you use AI as a teammate?
 
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
-- Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+- Q1 Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)? Claude
+- Q2 Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+  A2:
+  AI suggestion: "The hint messages are swapped. When the guess is too high, the player should be told to go lower, and vice versa. The bug exists in both branches of check_guess. Fixing both:"
+  How I verified: I reviewed suggested edits in both branches of check_guess and confirmed the updated logic matched what I expected - when the guess is too low, it says "Go HIGHER," and when the guess is too high it returns "Go LOWER.". I then accepted the edits and replayed the game to confirm the hints were correct.
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
 ---
