@@ -43,4 +43,6 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 🚀 Stretch Features
 
+- [ ]If you completed Challenge 1: Advanced Edge-Case Testing, include a screenshot of your pytest results in the README showing the tests passing.
+- ![pytest-results screenshot](images/pytest-results.png)
 - [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
